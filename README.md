@@ -1,2 +1,2 @@
-# rtd-starter-parent
-rtd-starter-parent
+# bpd-starter-parent
+bpd-starter-parent

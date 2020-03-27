@@ -10,7 +10,7 @@
         <version>2.1.3.RELEASE</version>
     </parent>
 
-    <groupId>it.gov.pagopa.bpd</groupId>
+    <groupId>it.gov.pagopa.bpd.ms</groupId>
     <artifactId>bpd-ms-starter-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>

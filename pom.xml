@@ -10,7 +10,7 @@
         <version>2.1.3.RELEASE</version>
     </parent>
 
-    <groupId>eu.sia.meda</groupId>
+    <groupId>it.gov.pagopa.bpd</groupId>
     <artifactId>bpd-ms-starter-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -61,6 +61,12 @@
                 <version>1.18.12</version>
                 <optional>true</optional>
             </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.2.11</version>
+                <scope>runtime</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -69,15 +75,15 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <dependency>
-            <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-core</artifactId>
-            <type>test-jar</type>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>eu.sia.meda</groupId>-->
+<!--            <artifactId>meda-arch-core</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>eu.sia.meda</groupId>-->
+<!--            <artifactId>meda-arch-core</artifactId>-->
+<!--            <type>test-jar</type>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-contract-wiremock</artifactId>
@@ -86,14 +92,14 @@
             <groupId>com.github.tomakehurst</groupId>
             <artifactId>wiremock-standalone</artifactId>
         </dependency>
-        <dependency>
-            <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-error</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-audit</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>eu.sia.meda</groupId>-->
+<!--            <artifactId>meda-arch-error</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>eu.sia.meda</groupId>-->
+<!--            <artifactId>meda-arch-audit</artifactId>-->
+<!--        </dependency>-->
 <!--        TODO: da controllare se serve-->
 <!--        <dependency>-->
 <!--            <groupId>eu.sia.meda</groupId>-->

@@ -129,20 +129,6 @@
 <!--            <groupId>eu.sia.meda</groupId>-->
 <!--            <artifactId>meda-arch-audit</artifactId>-->
 <!--        </dependency>-->
-<!--        TODO: da controllare se serve-->
-<!--        <dependency>-->
-<!--            <groupId>eu.sia.meda</groupId>-->
-<!--            <artifactId>meda-arch-utils</artifactId>-->
-<!--            <type>test-jar</type>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        TODO: da controllare se serve-->
-<!--        <dependency>-->
-<!--            <groupId>eu.sia.meda</groupId>-->
-<!--            <artifactId>meda-arch-core</artifactId>-->
-<!--            <type>test-jar</type>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
 <!--        TODO: indirect dependency from meda-arch-core-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.security</groupId>-->
@@ -258,10 +244,6 @@
             <!-- </execution> -->
             <!-- </executions> -->
             <!-- </plugin> -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

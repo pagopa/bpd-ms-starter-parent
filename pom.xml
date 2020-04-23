@@ -150,7 +150,7 @@
                             <apiSource>
                                 <springmvc>true</springmvc>
                                 <locations>
-                                    <location>eu.sia.meda</location>
+                                    <location>it.gov.pagopa.bpd</location>
                                 </locations>
                                 <schemes>
                                     <scheme>http</scheme>

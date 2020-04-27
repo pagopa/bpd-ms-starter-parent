@@ -122,10 +122,10 @@
             <groupId>com.github.tomakehurst</groupId>
             <artifactId>wiremock-standalone</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>eu.sia.meda</groupId>-->
-<!--            <artifactId>meda-arch-error</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>eu.sia.meda</groupId>
+            <artifactId>meda-arch-error</artifactId>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>eu.sia.meda</groupId>-->
 <!--            <artifactId>meda-arch-audit</artifactId>-->

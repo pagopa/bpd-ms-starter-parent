@@ -100,16 +100,6 @@
         </dependency>
         <dependency>
             <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-utils</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>eu.sia.meda</groupId>-->
-<!--            <artifactId>meda-arch-core</artifactId>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
@@ -126,10 +116,6 @@
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-error</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>eu.sia.meda</groupId>-->
-<!--            <artifactId>meda-arch-audit</artifactId>-->
-<!--        </dependency>-->
 <!--        TODO: indirect dependency from meda-arch-core-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.security</groupId>-->

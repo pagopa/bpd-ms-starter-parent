@@ -42,7 +42,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            TODO: required???-->
+<!--            TODO: required??? gia presente nel meda-arch e in meda-bom -->
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.cloud</groupId>-->
 <!--                <artifactId>spring-cloud-dependencies</artifactId>-->

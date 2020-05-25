@@ -109,20 +109,20 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-contract-wiremock</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.github.tomakehurst</groupId>
-            <artifactId>wiremock-standalone</artifactId>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.tomakehurst</groupId>-->
+        <!--            <artifactId>wiremock-standalone</artifactId>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-error</artifactId>
         </dependency>
-<!--        TODO: indirect dependency from meda-arch-core-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        TODO: indirect dependency from meda-arch-core-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.security</groupId>-->
+        <!--            <artifactId>spring-security-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>

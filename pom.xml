@@ -27,7 +27,8 @@
         <spring-boot-maven-plugin.version>${spring-boot.version}</spring-boot-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version> -->
-        <sonar.exclusions>**/enums/**,**/model/**,**/Constants*.java</sonar.exclusions>
+        <sonar.exclusions>**/enums/**,**/model/**,**/Constants*.java,**/*Config.java,**/*Application.java
+        </sonar.exclusions>
         <spring-kafka.version>2.2.11.RELEASE</spring-kafka.version>
     </properties>
 

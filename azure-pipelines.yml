@@ -1,25 +1,30 @@
-# Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- develop
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: DownloadSecureFile@1
+  displayName: 'download settings.xml for Maven'
+  name: settingsxml
+  inputs:
+    secureFile: 'settings.xml'
+    retryCount: '2'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean deploy'
-    options: '-DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
+    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: true
+    mavenAuthenticateFeed: false
     effectivePomSkip: true
     sonarQubeRunAnalysis: false

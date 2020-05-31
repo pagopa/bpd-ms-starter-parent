@@ -10,12 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: DownloadSecureFile@1
-  displayName: 'download settings.xml for Maven'
-  name: settingsxml
-  inputs:
-    secureFile: 'settings.xml'
-    retryCount: '2'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -26,6 +20,6 @@ steps:
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: false
+    mavenAuthenticateFeed: true
     effectivePomSkip: true
     sonarQubeRunAnalysis: false

@@ -16,9 +16,6 @@ steps:
   inputs:
     secureFile: 'settings.xml'
     retryCount: '2'
-- task: MavenAuthenticate@0
-  inputs:
-    artifactsFeeds: 'cstar'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

@@ -44,7 +44,7 @@ stages:
       inputs:
         mavenPomFile: 'pom.xml'
         goals: 'deploy'
-        options: '-s $(settingsxml.secureFilePath)'
+        options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'

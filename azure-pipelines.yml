@@ -19,8 +19,8 @@ trigger:
 
 resources:
   pipelines:
-  - pipeline: pagopaBpdMsStarterParent
-    source: pagopa.bpd-ms-starter-parent
+  - pipeline: medaBom
+    source: pagopa.meda-bom
     trigger: 
       branches:
         include: 

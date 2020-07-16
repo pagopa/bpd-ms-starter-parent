@@ -30,13 +30,14 @@
         <sonar.exclusions>**/enums/**,**/model/**,**/Constants*.java,**/*Config.java,**/*Application.java
         </sonar.exclusions>
         <spring-kafka.version>2.2.11.RELEASE</spring-kafka.version>
+        <mockito.version>2.27.0</mockito.version>
     </properties>
 
     <!-- We can't have two parent POMs, so use DependencyManagement to show
 		Maven where the Spring Cloud dependencies are. -->
     <dependencyManagement>
         <dependencies>
-<!--            TODO: required???-->
+            <!--            TODO: required???-->
             <dependency>
                 <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-bom</artifactId>
@@ -44,20 +45,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            TODO: required??? gia presente nel meda-arch e in meda-bom -->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-dependencies</artifactId>-->
-<!--                <version>${spring-cloud.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-<!--            TODO: gia presente nel meda-arch-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.kafka</groupId>-->
-<!--                <artifactId>spring-kafka</artifactId>-->
-<!--                <version>2.4.3.RELEASE</version>-->
-<!--            </dependency>-->
+            <!--            TODO: required??? gia presente nel meda-arch e in meda-bom -->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.cloud</groupId>-->
+            <!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+            <!--                <version>${spring-cloud.version}</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
+            <!--            TODO: gia presente nel meda-arch-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.kafka</groupId>-->
+            <!--                <artifactId>spring-kafka</artifactId>-->
+            <!--                <version>2.4.3.RELEASE</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -74,12 +75,6 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>2.27.0</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -100,6 +95,12 @@
             <artifactId>mockito-core</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
@@ -247,30 +248,24 @@
         </plugins>
     </build>
 
-<distributionManagement>
-	<repository>
-	  <id>cstar</id>
-	  <url>https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1</url>
-	  <releases>
-	    <enabled>true</enabled>
-	  </releases>
-	  <snapshots>
-	    <enabled>true</enabled>
-	  </snapshots>
-	</repository>
-</distributionManagement>
-	
-<repositories>
-	<repository>
-	  <id>cstar</id>
-	  <url>https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1</url>
-	  <releases>
-	    <enabled>true</enabled>
-	  </releases>
-	  <snapshots>
-	    <enabled>true</enabled>
-	  </snapshots>
-	</repository>
-</repositories>
-	
+    <distributionManagement>
+        <repository>
+            <id>cstar</id>
+            <url>https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>cstar</id>
+            <url>https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 </project>

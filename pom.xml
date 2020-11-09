@@ -268,4 +268,8 @@
         </repository>
     </repositories>
 
+    <scm>
+        <developerConnection>scm:git:https://github.com/pagopa/bpd-ms-starter-parent.git</developerConnection>
+    </scm>
+
 </project>

@@ -10,7 +10,7 @@
 
     <groupId>it.gov.pagopa.bpd.ms</groupId>
     <artifactId>bpd-ms-starter-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -35,28 +35,13 @@
 		Maven where the Spring Cloud dependencies are. -->
     <dependencyManagement>
         <dependencies>
-            <!--            TODO: required???-->
             <dependency>
                 <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-bom</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--            TODO: required??? gia presente nel meda-arch e in meda-bom -->
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-dependencies</artifactId>-->
-            <!--                <version>${spring-cloud.version}</version>-->
-            <!--                <type>pom</type>-->
-            <!--                <scope>import</scope>-->
-            <!--            </dependency>-->
-            <!--            TODO: gia presente nel meda-arch-->
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework.kafka</groupId>-->
-            <!--                <artifactId>spring-kafka</artifactId>-->
-            <!--                <version>2.4.3.RELEASE</version>-->
-            <!--            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -109,20 +94,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-contract-wiremock</artifactId>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.github.tomakehurst</groupId>-->
-        <!--            <artifactId>wiremock-standalone</artifactId>-->
-        <!--        </dependency>-->
+
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-error</artifactId>
         </dependency>
-        <!--        TODO: indirect dependency from meda-arch-core-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.security</groupId>-->
-        <!--            <artifactId>spring-security-test</artifactId>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-actuator</artifactId>
@@ -174,11 +150,6 @@
                         </execution>
                     </executions>
                 </plugin>
-                <!-- <plugin> -->
-                <!-- <groupId>org.sonarsource.scanner.maven</groupId> -->
-                <!-- <artifactId>sonar-maven-plugin</artifactId> -->
-                <!-- <version>${sonar-maven-plugin.version}</version> -->
-                <!-- </plugin> -->
             </plugins>
         </pluginManagement>
         <plugins>
@@ -202,49 +173,12 @@
                 <artifactId>maven-deploy-plugin</artifactId>
             </plugin>
 
-            <!-- <plugin> -->
-            <!-- <groupId>org.apache.maven.plugins</groupId> -->
-            <!-- <artifactId>maven-surefire-plugin</artifactId> -->
-            <!-- <version>${maven-surefire-plugin.version}</version> -->
-            <!-- <configuration> -->
-            <!-- <reportsDirectory>${session.executionRootDirectory}/sonar-report/junit/</reportsDirectory> -->
-            <!-- </configuration> -->
-            <!-- </plugin> -->
-            <!-- <plugin> -->
-            <!-- <groupId>org.jacoco</groupId> -->
-            <!-- <artifactId>jacoco-maven-plugin</artifactId> -->
-            <!-- <version>${maven-jacoco-plugin.version}</version> -->
-            <!-- <executions> -->
-            <!-- <execution> -->
-            <!-- <goals> -->
-            <!-- <goal>prepare-agent</goal> -->
-            <!-- </goals> -->
-            <!-- <configuration> -->
-            <!-- <destFile>${session.executionRootDirectory}/sonar-report/jacoco/jacoco.exec</destFile> -->
-            <!-- </configuration> -->
-            <!-- </execution> -->
-            <!-- <execution> -->
-            <!-- <id>report</id> -->
-            <!-- <phase>prepare-package</phase> -->
-            <!-- <goals> -->
-            <!-- <goal>report</goal> -->
-            <!-- </goals> -->
-            <!-- <configuration> -->
-            <!-- <dataFile>${session.executionRootDirectory}/sonar-report/jacoco/jacoco.exec</dataFile> -->
-            <!-- <outputDirectory>${session.executionRootDirectory}/sonar-report/jacoco</outputDirectory> -->
-            <!-- </configuration> -->
-            <!-- </execution> -->
-            <!-- </executions> -->
-            <!-- </plugin> -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <!-- <executable>${JAVAC_8}</executable> -->
-                    <!-- <fork>true</fork> -->
-                    <!-- <verbose>true</verbose> -->
                 </configuration>
             </plugin>
         </plugins>
@@ -273,6 +207,6 @@
     <scm>
         <developerConnection>scm:git:https://github.com/pagopa/bpd-ms-starter-parent.git</developerConnection>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
 
 </project>

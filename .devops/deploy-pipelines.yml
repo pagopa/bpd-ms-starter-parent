@@ -19,8 +19,7 @@ resources:
             - master
             - release
             - features/*
-
-  steps:
+steps:
     - task: DownloadSecureFile@1
       displayName: 'download settings.xml for Maven'
       name: settingsxml

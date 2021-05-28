@@ -20,23 +20,23 @@ resources:
             - release
             - features/*
 steps:
-    - task: DownloadSecureFile@1
-      displayName: 'download settings.xml for Maven'
-      name: settingsxml
-      inputs:
-        secureFile: 'settings-rw.xml'
-        retryCount: '2'
-    - task: Maven@3
-      displayName: Build and Deploy Artifacts
-      inputs:
-        mavenPomFile: 'pom.xml'
-        goals: 'deploy'
-        options: '-s $(settingsxml.secureFilePath) -DskipTests=true -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1'
-        javaHomeOption: 'JDKVersion'
-        jdkVersionOption: '1.11'
-        jdkArchitectureOption: 'x64'
-        mavenVersionOption: 'Default'
-        mavenOptions: '-Xmx3072m'
-        mavenAuthenticateFeed: true
-        effectivePomSkip: true
-        sonarQubeRunAnalysis: false
+  - task: DownloadSecureFile@1
+    displayName: 'download settings.xml for Maven'
+    name: settingsxml
+    inputs:
+      secureFile: 'settings-rw.xml'
+      retryCount: '2'
+  - task: Maven@3
+    displayName: Build and Deploy Artifacts
+    inputs:
+      mavenPomFile: 'pom.xml'
+      goals: 'deploy'
+      options: '-s $(settingsxml.secureFilePath) -DskipTests=true -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.11'
+      jdkArchitectureOption: 'x64'
+      mavenVersionOption: 'Default'
+      mavenOptions: '-Xmx3072m'
+      mavenAuthenticateFeed: true
+      effectivePomSkip: true
+      sonarQubeRunAnalysis: false

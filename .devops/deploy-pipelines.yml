@@ -12,7 +12,7 @@ pool:
 resources:
   pipelines:
     - pipeline: medaBom
-      source: pagopa.meda-bom.deploy
+      source: pagopa.meda-bom.meda-bom.deploy
       trigger:
         branches:
           include:

@@ -11,7 +11,7 @@ pool:
 
 resources:
   pipelines:
-    - pipeline: medaBomDeploy
+    - pipeline: medabomdeploy
       source: pagopa.meda-bom
       trigger:
         branches:

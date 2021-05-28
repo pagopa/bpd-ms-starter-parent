@@ -9,17 +9,17 @@ pr: none
 pool:
   vmImage: 'ubuntu-latest'
 
-resources:
-  pipelines:
-    - pipeline: medaBom
-      source: pagopa.meda-bom.meda-bom.deploy
-      trigger:
-        branches:
-          include:
-            - master
-            - release
-            - features/*
-            - feature/*
+#resources:
+#  pipelines:
+#    - pipeline: medaBom
+#      source: pagopa.meda-bom.meda-bom.deploy
+#      trigger:
+#        branches:
+#          include:
+#            - master
+#            - release
+#            - features/*
+#            - feature/*
 steps:
   - task: DownloadSecureFile@1
     displayName: 'download settings.xml for Maven'

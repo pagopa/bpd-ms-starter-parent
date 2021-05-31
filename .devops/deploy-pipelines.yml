@@ -30,7 +30,7 @@ steps:
   - task: MavenAuthenticate@0
     displayName: 'Maven Authenticate'
     inputs:
-     MavenServiceConnections: cstar
+     artifactsFeeds: cstar
   - task: Maven@3
     displayName: Build and Deploy Artifacts
     inputs:

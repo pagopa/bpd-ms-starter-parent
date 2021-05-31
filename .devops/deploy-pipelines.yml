@@ -27,6 +27,10 @@ steps:
     inputs:
       secureFile: 'settings-rw.xml'
       retryCount: '2'
+  - task: MavenAuthenticate@0
+    displayName: 'Maven Authenticate'
+    inputs:
+     MavenServiceConnections: cstar
   - task: Maven@3
     displayName: Build and Deploy Artifacts
     inputs:

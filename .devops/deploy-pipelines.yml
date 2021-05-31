@@ -27,16 +27,12 @@ steps:
     inputs:
       secureFile: 'settings-rw.xml'
       retryCount: '2'
-  - task: MavenAuthenticate@0
-    displayName: 'Maven Authenticate'
-    inputs:
-     artifactsFeeds: cstar
   - task: Maven@3
     displayName: Build and Deploy Artifacts
     inputs:
       mavenPomFile: 'pom.xml'
       goals: 'deploy'
-      options: '-DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1'
+      options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1'
       javaHomeOption: 'JDKVersion'
       jdkVersionOption: '1.11'
       jdkArchitectureOption: 'x64'

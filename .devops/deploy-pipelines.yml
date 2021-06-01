@@ -25,7 +25,7 @@ steps:
     displayName: 'download settings.xml for Maven'
     name: settingsxml
     inputs:
-      secureFile: 'settings-rw.xml'
+      secureFile: 'settings-rw2.xml'
       retryCount: '2'
   - task: Maven@3
     displayName: Build and Deploy Artifacts

@@ -190,7 +190,7 @@
             <url>https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1</url>
         </repository>
     </distributionManagement>
-
+-->
     <repositories>
         <repository>
             <id>cstar</id>
@@ -203,7 +203,7 @@
             </snapshots>
         </repository>
     </repositories>
--->
+
     <scm>
         <developerConnection>scm:git:https://github.com/pagopa/bpd-ms-starter-parent.git</developerConnection>
       <tag>1.1.1</tag>

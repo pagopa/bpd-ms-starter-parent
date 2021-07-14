@@ -26,7 +26,6 @@
         <!-- <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version> -->
         <sonar.exclusions>**/enums/**,**/model/**,**/Constants*.java,**/*Config.java,**/*Application.java
         </sonar.exclusions>
-<!--        <spring-kafka.version>2.3.13.RELEASE</spring-kafka.version>-->
         <mockito.version>2.27.0</mockito.version>
     </properties>
 
